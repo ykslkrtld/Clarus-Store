@@ -15,7 +15,7 @@ const ProductProvider = ({ children }) => {
   const getData = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get(
+      const { data } = await axios(
         `https://dummyjson.com/products/search?q=${search}`
       );
 

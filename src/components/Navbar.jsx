@@ -24,7 +24,7 @@ const Navbar = () => {
   const location = useLocation();
   console.log(location);
   return (
-    <nav className="bg-red-500 border-y-8 border-orange-400 md:text-sm">
+    <nav className="bg-red-500 border-y-8 border-orange-400 md:text-sm sticky top-0 opacity-90">
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 py-3  md:flex md:px-8">
         <div className="flex items-center justify-between py-5 md:block ">
           <a
