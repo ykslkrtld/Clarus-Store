@@ -34,7 +34,7 @@ const Stats = () => {
           <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x">
             {stats.map((item, idx) => (
               <li key={idx} className="text-center px-12 md:px-16">
-                <h4 className="text-4xl text-main font-semibold">
+                <h4 className="text-4xl text-red-500 font-semibold">
                   {item.data}
                 </h4>
                 <p className="mt-3 font-medium">{item.title}</p>

@@ -17,7 +17,7 @@ const About = () => {
         <div className="mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {team.map((item, idx) => (
-              <li key={idx}>
+              <li key={idx} className="border rounded-lg p-3">
                 <div className="w-24 h-24 mx-auto">
                   <img
                     src={item.avatar}
@@ -31,7 +31,7 @@ const About = () => {
                   </h4>
                   <p className="text-indigo-600">{item.title}</p>
                   <p className="text-gray-600 mt-2">{item.desc}</p>
-                  <div className="mt-4 flex justify-center gap-4 text-gray-400">
+                  <div className="mt-4 flex justify-center gap-4 text-blue-500">
                     <a href={item.twitter}>
                       <svg
                         className="w-5 h-5 duration-150 hover:text-gray-500"

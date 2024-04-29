@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import scrollTopIcon from "../assets/scrollup.png";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
@@ -10,12 +9,13 @@ export default function ScrollToTop() {
   //   }, [pathname]);
 
   return pathname.includes("products") ? (
-    <img
-      className="fixed bottom-2 right-2 cursor-pointer"
+    <p
+      className="fixed bottom-2 right-2 cursor-pointer bg-red-500 py-2 px-4 rounded-full text-white text-[1.5rem]"
       onClick={() => window.scrollTo(0, 0)}
-      src={scrollTopIcon}
       width={40}
       alt="scrollup"
-    />
+    >
+      <i className="fa-solid fa-arrow-up"></i>
+    </p>
   ) : null;
 }

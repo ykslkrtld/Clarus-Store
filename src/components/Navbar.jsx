@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import logo from "../assets/logo.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { closeNavbar, logoutIcon, openNavbar } from "../helpers/icons";
 import { AuthContext } from "../context/AuthProvider";
@@ -25,20 +24,16 @@ const Navbar = () => {
   const location = useLocation();
   console.log(location);
   return (
-    <nav className="bg-navbarColor md:text-sm">
-      <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+    <nav className="bg-red-500 border-y-8 border-orange-400 md:text-sm">
+      <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 py-3  md:flex md:px-8">
         <div className="flex items-center justify-between py-5 md:block ">
           <a
-            href="https://clarusway.com/"
-            target="true"
-            className="flex items-center"
+            href="/dashboard/products"
+            className="flex items-center font-bold text-[1.3rem] "
           >
-            <img src={logo} alt="clarusway" width={50} height={50} />
-            <span className="text-gray-700 hover:text-gray-900 font-medium">
-              Clarusway
-            </span>
+              YKSL Store
+          
           </a>
-          {/**icon md ekranlardan sonra gizlensin diyoruz */}
           <div className="md:hidden">
             <button
               className="text-gray-500 hover:text-gray-800"
@@ -62,7 +57,7 @@ const Navbar = () => {
                 <NavLink
                   to={item.path}
                   className={`block hover:bg-main rounded-full py-2 px-4 hover:text-white ${
-                    location.pathname === item.path ? "underline scale-125" : ""
+                    location.pathname === item.path ? "bg-main scale-125" : ""
                   } `}
                 >
                   {item.title}

@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
   return (
     <>
       <div
-        className="cursor-pointer"
+        className="cursor-pointer border p-2 rounded-md"
         onClick={() => navigate(`${id}`, { state: product })}
       >
         <div className="w-full rounded-md bg-gray-200 hover:opacity-75 lg:h-80">
@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
               {category}
             </p>
           </div>
-          <p className="text-sm font-medium text-gray-900">{price} $</p>
+          <p className="text-sm font-medium text-gray-900 flex items-center">{price} $</p>
         </div>
       </div>
       <ScrollToTop />

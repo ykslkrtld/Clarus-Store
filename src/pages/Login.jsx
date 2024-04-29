@@ -8,7 +8,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email.toLocaleLowerCase() === "admin@aa.com" && pass === "admin") {
+    if (email.toLocaleLowerCase() === "admin@yksl.com" && pass === "admin123") {
       console.log({ email, pass });
       login({ email, pass });
     } else {
@@ -17,11 +17,11 @@ const Login = () => {
   };
   return (
     <div className="loginDiv">
-      <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-[20px] p-5 flex flex-col justify-center text-center ">
+      <div className="h-[500px] w-10/12 sm:w-[25rem] bg-white p-5 flex flex-col justify-center text-center ">
         <div className="flex justify-center items-center mt-2 gap-2 ">
-          <span className="w-[6px] h-[39px] bg-yellow-500 "></span>
+          <span className="w-[6px] h-[39px] bg-red-500 "></span>
           <h1 className="text-[22px] sm:text-[32px] font-montserrat font-[700] uppercase ">
-            Clarus Store
+            Yksl Store
           </h1>
         </div>
         <div className="my-2">
@@ -36,7 +36,7 @@ const Login = () => {
         >
           <div className="flex flex-col gap-2">
             <label
-              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
+              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@yksl.com'] hover:after:text-red-500 hover:after:pl-3"
               htmlFor="email"
             >
               Email
@@ -52,7 +52,7 @@ const Login = () => {
           </div>
           <div className="flex flex-col gap-2">
             <label
-              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
+              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin123'] hover:after:text-red-500 hover:after:pl-3"
               htmlFor="password"
             >
               Password
@@ -66,7 +66,7 @@ const Login = () => {
               onChange={(e) => setPass(e.target.value)}
             />
           </div>
-          <button className="bg-main h-[44px] font-montserrat text-label text-white uppercase hover:opacity-90 rounded-[4px] ">
+          <button className="bg-red-500 h-[44px] font-montserrat text-label text-white uppercase hover:opacity-90 rounded-[4px] ">
             Sign In
           </button>
           <p className="flex justify-center items-center flex-wrap">

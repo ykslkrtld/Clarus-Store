@@ -4,10 +4,8 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 const ProductDetail = () => {
   const navigate = useNavigate();
-  // const { state } = useLocation();//? navigate ile taşınan veriyi useLocation() hooku ile karşılayabiliyoruz. urlde yer alan parametreleri search ile yakalayabiliyoruz.
 
-  const { id } = useParams(); //* dinamik routelardaki parametreyi yakalar. route ayarlaması yaparken ne isim verdiysek useParams ile onu yakalarız.
-  // console.log(params);
+  const { id } = useParams(); 
 
   const [state, setState] = useState({});
 
@@ -66,7 +64,7 @@ const ProductDetail = () => {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => navigate(-1)}
-                className="border rounded-lg bg-labelColor text-white p-2"
+                className="border rounded-lg bg-red-500 text-white p-2"
               >
                 Geri
               </button>

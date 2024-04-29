@@ -1,20 +1,11 @@
 import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-//!1 contexti oluştur
 const ProductContext = createContext();
 
-//! react hooklarını javascript fonksyionları içerisinde kullanamadığımız için custom hooklara ihtiyaç duyarız.
-//? custom hooklar use keywordü ile başlamak zorunda
-//* custom hooklar jsx return etmez.
-//! zorunlu değil tükteim yaparken sadece kolaylık sağlıyor
 export const useProductsContext = () => {
   return useContext(ProductContext);
 };
-//? contexte ihtiyaç duymamızın sebebi detail sayfasına gittikten sonra geri geldiğimizde hem kullanıcının yazdığı query hem de api den gelen sonuçların kaybolmamasıni istememiz.
-//! Ayrıca products sayfasında yapsaydık veri çekme işlemini her sayfa render olduğunda arama olmadığı halde apiye istek atacaktı.
-
-//!2 sarmalayıcı componenti oluştur. Saklanan veriler,fonksiyonlar burada tanımlanır ve buradan paylaşılır
 
 const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
@@ -38,7 +29,7 @@ const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     getData();
-  }, [search]); //! search state'i değiştikçe getData fonksiyonu çalışsın
+  }, [search]);
 
   const values = { products, loading, setSearch, search };
   return (
