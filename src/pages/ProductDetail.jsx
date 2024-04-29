@@ -63,16 +63,16 @@ const ProductDetail = () => {
             </div>
             <div className="flex justify-end gap-3 mt-4">
               <button
-                onClick={() => navigate(-1)}
-                className="border rounded-lg bg-red-500 text-white p-2"
-              >
-                Geri
-              </button>
-              <button
                 onClick={() => navigate("/dashboard")}
                 className="border rounded-lg bg-main text-white p-2"
               >
-                Ana Sayfaya Dön
+                Home
+              </button>
+              <button
+                onClick={() => navigate(-1)}
+                className="border rounded-lg bg-red-500 text-white p-2"
+              >
+                Go Back
               </button>
             </div>
           </div>
