@@ -4,7 +4,7 @@ import { team } from "../helpers/data";
 const About = () => {
   return (
     <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
+      <div className="max-w-screen-xl mx-auto px-4 text-center md:px-9">
         <div className="max-w-xl mx-auto">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
             Meet our team
